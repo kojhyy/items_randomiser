@@ -11,7 +11,6 @@ class ControleurGenerate(val vue: Vue,val modele : modele): EventHandler<MouseEv
 
     override fun handle(p0: MouseEvent?) {
         this.modele.randomise()
-        println(modele)
         this.vue.update_images(this.modele.get_items())
     }
 }
