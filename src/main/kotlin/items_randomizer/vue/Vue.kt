@@ -5,7 +5,7 @@ import javafx.scene.control.*
 import javafx.scene.image.Image
 import javafx.scene.image.ImageView
 import javafx.scene.layout.GridPane
-import javafx.scene.layout.HBox
+
 import java.io.FileInputStream
 
 
@@ -26,6 +26,14 @@ class Vue: GridPane() {
 
 
     init {
+
+        this.setHgap(10.0) //horizontal gap in pixels => that's what you are asking for
+
+        this.setVgap(10.0) //vertical gap in pixels
+
+        //this.setPadding(Insets(10.0, 10.0, 10.0, 10)) //margins around the whole grid
+
+        //(top/right/bottom/left)
         // placement des éléments
         this.add(this.image_champ, 0 , 0)
         this.add(this.image_item_boots, 1 , 0)
