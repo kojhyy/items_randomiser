@@ -22,6 +22,7 @@ class Vue: GridPane() {
     private var image_item_boots = ImageView(Image(FileInputStream("$path_images/Item/Boots/Berserkers_Greaves_item.png")))
     private var image_champ = ImageView(Image(FileInputStream("$path_images/Champion/Aatrox.png")))
 
+
     private val generate = Button("Build")
 
 
