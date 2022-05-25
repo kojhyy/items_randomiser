@@ -21,6 +21,7 @@ class Vue: GridPane() {
     private var image_item_mythic = ImageView(Image(FileInputStream("$path_images/Item/Mythique/Crown_of_the_Shattered_Queen_item.png")))
     private var image_item_boots = ImageView(Image(FileInputStream("$path_images/Item/Boots/Berserkers_Greaves_item.png")))
     private var image_champ = ImageView(Image(FileInputStream("$path_images/Champion/Aatrox.png")))
+    private var image_rune = ImageView(Image(FileInputStream("$path_images/Runes/Update_Runes/Aftershock_rune.png")))
 
 
     private val generate = Button("Build")
@@ -45,6 +46,10 @@ class Vue: GridPane() {
         this.add(this.image_item4, 6 , 0)
 
 
+        this.add(this.image_rune, 0, 2)
+        image_rune.setFitWidth(100.0);
+        image_rune.setFitHeight(100.0);
+
         this.add(this.generate, 0, 1)
 
 
@@ -58,6 +63,7 @@ class Vue: GridPane() {
         this.image_item_mythic.image = Image(FileInputStream("$path_images/Item/Mythique/${array[4]}_item.png"))
         this.image_item_boots.image = Image(FileInputStream("$path_images/Item/Boots/${array[5]}_item.png"))
         this.image_champ.image  = Image(FileInputStream("$path_images/Champion/${array[6]}.png"))
+        this.image_rune.image  = Image(FileInputStream("$path_images/Runes/Update_Runes/${array[7]}.png"))
     }
 
     /*

@@ -39,7 +39,16 @@ class modele {
         "Dark_Harvest_rune", "Electrocute_rune", "Hail_of_Blades_rune", "Predator_rune",
     )
     private val liste_inspiration = mutableListOf<String>(
-        "First_Strike_rune", "Glacial_Augment_rune", "Hail_of_Blades_rune", "Unsealed_Spellbook_rune",
+        "First_Strike_rune", "Glacial_Augment_rune", "Unsealed_Spellbook_rune",
+    )
+    private val liste_precision = mutableListOf<String>(
+        "Conqueror_rune", "Fleet_Footwork_rune", "Fleet_Footwork_rune", "Press_the_Attack_rune"
+    )
+    private val liste_sorcellerie = mutableListOf<String>(
+        "Arcane_Comet_rune", "Phase_Rush_rune", "Summon_Aery_rune",
+    )
+    private val liste_volonte = mutableListOf<String>(
+        "Aftershock_rune", "Grasp_of_the_Undying_rune", "Guardian_rune",
     )
 
 
@@ -71,16 +80,16 @@ class modele {
             this.rune_principal = this.liste_domination[Random.nextInt(this.liste_domination.size)]
         }
         if (rune == 1){
-            this.rune_principal = this.liste_domination[Random.nextInt(this.liste_domination.size)]
+            this.rune_principal = this.liste_inspiration[Random.nextInt(this.liste_inspiration.size)]
         }
         if (rune == 2){
-            this.rune_principal = this.liste_domination[Random.nextInt(this.liste_domination.size)]
+            this.rune_principal = this.liste_precision[Random.nextInt(this.liste_precision.size)]
         }
         if (rune == 3){
-            this.rune_principal = this.liste_domination[Random.nextInt(this.liste_domination.size)]
+            this.rune_principal = this.liste_sorcellerie[Random.nextInt(this.liste_sorcellerie.size)]
         }
         if (rune == 4){
-            this.rune_principal = this.liste_domination[Random.nextInt(this.liste_domination.size)]
+            this.rune_principal = this.liste_volonte[Random.nextInt(this.liste_volonte.size)]
         }
 
 
@@ -112,7 +121,7 @@ class modele {
         return true
     }
 
-    override fun toString(): String = "$item1, $item2, $item3, $item4, $item_mythic, $item_boots, $champ"
+    override fun toString(): String = "$item1, $item2, $item3, $item4, $item_mythic, $item_boots, $champ, $rune_principal"
 
-    fun get_items(): Array<String> = arrayOf(this.item1, this.item2, this.item3, this.item4, this.item_mythic, this.item_boots, this.champ)
+    fun get_items(): Array<String> = arrayOf(this.item1, this.item2, this.item3, this.item4, this.item_mythic, this.item_boots, this.champ, this.rune_principal)
 }
