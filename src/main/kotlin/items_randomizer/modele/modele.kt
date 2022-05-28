@@ -12,6 +12,9 @@ class modele {
     var item_boots: String = ""
     var champ: String = ""
     var rune_principal = ""
+    var rune_secondaire1 = ""
+    var rune_secondaire2 = ""
+    var rune_secondaire3 = ""
 
     var interdit1 = arrayListOf<Int>(21, 24)           //"Guinsoo's Rageblade","Infinity Edge")
     var interdit2 = arrayListOf<Int>(41, 55)           //"Titanic Hydra","Ravenous Hydra")
@@ -50,6 +53,53 @@ class modele {
     private val liste_volonte = mutableListOf<String>(
         "Aftershock_rune", "Grasp_of_the_Undying_rune", "Guardian_rune",
     )
+    private val liste_domination_1 = mutableListOf<String>(
+        "Cheap_Shot_rune", "Sudden_Impact_rune", "Taste_of_Blood_rune",
+    )
+    private val liste_domination_2 = mutableListOf<String>(
+        "Ghost_Poro_rune","Ghost_Poro_rune", "Eyeball_Collection_rune",
+    )
+    private val liste_domination_3 = mutableListOf<String>(
+        "Ingenious_Hunter_rune","Relentless_Hunter_rune", "Treasure_Hunter_rune","Ultimate_Hunter_rune"
+    )
+    private val liste_inspiration_1 = mutableListOf<String>(
+        "Hextech_Flashtraption_rune", "Magical_Footwear_rune", "Perfect_Timing_rune",
+    )
+    private val liste_inspiration_2 = mutableListOf<String>(
+        "Futures_Market_rune", "Minion_Dematerializer_rune", "Biscuit_Delivery_rune",
+    )
+    private val liste_inspiration_3 = mutableListOf<String>(
+        "Approach_Velocity_rune", "Cosmic_Insight_rune", "Time_Warp_Tonic_rune",
+    )
+    private val liste_precision_1 = mutableListOf<String>(
+        "Overheal_rune", "Triumph_rune", "Presence_of_Mind_rune",
+    )
+    private val liste_precision_2 = mutableListOf<String>(
+        "Legend-_Alacrity_rune", "Legend-_Bloodline_rune", "Legend-_Tenacity_rune",
+    )
+    private val liste_precision_3 = mutableListOf<String>(
+        "Coup_de_Grace_rune", "Cut_Down_rune", "Last_Stand_rune",
+    )
+    private val liste_sorcellerie_1 = mutableListOf<String>(
+        "Nullifying_Orb_rune", "Manaflow_Band_rune", "Nimbus_Cloak_rune",
+    )
+    private val liste_sorcellerie_2 = mutableListOf<String>(
+        "Transcendence_rune", "Celerity_rune", "Absolute_Focus_rune",
+    )
+    private val liste_sorcellerie_3 = mutableListOf<String>(
+        "Scorch_rune", "Waterwalking_rune", "Gathering_Storm_rune",
+    )
+    private val liste_volonte_1 = mutableListOf<String>(
+        "Unflinching_rune", "Demolish_rune", "Font_of_Life_rune",
+    )
+    private val liste_volonte_2 = mutableListOf<String>(
+        "Bone_Plating_rune", "Shield_Bash_rune", "Conditioning_rune",
+    )
+    private val liste_volonte_3 = mutableListOf<String>(
+        "Overgrowth_rune", "Revitalize_rune", "Second_Wind_rune",
+    )
+
+
 
 
 
@@ -78,18 +128,33 @@ class modele {
         }
         if (rune == 0){
             this.rune_principal = this.liste_domination[Random.nextInt(this.liste_domination.size)]
+            this.rune_secondaire1 = this.liste_domination_1[Random.nextInt(this.liste_domination_1.size)]
+            this.rune_secondaire2 = this.liste_domination_2[Random.nextInt(this.liste_domination_2.size)]
+            this.rune_secondaire3 = this.liste_domination_3[Random.nextInt(this.liste_domination_3.size)]
         }
         if (rune == 1){
             this.rune_principal = this.liste_inspiration[Random.nextInt(this.liste_inspiration.size)]
+            this.rune_secondaire1 = this.liste_inspiration_1[Random.nextInt(this.liste_domination_1.size)]
+            this.rune_secondaire2 = this.liste_inspiration_2[Random.nextInt(this.liste_domination_2.size)]
+            this.rune_secondaire3 = this.liste_inspiration_3[Random.nextInt(this.liste_domination_3.size)]
         }
         if (rune == 2){
             this.rune_principal = this.liste_precision[Random.nextInt(this.liste_precision.size)]
+            this.rune_secondaire1 = this.liste_precision_1[Random.nextInt(this.liste_domination_1.size)]
+            this.rune_secondaire2 = this.liste_precision_2[Random.nextInt(this.liste_domination_2.size)]
+            this.rune_secondaire3 = this.liste_precision_3[Random.nextInt(this.liste_domination_3.size)]
         }
         if (rune == 3){
             this.rune_principal = this.liste_sorcellerie[Random.nextInt(this.liste_sorcellerie.size)]
+            this.rune_secondaire1 = this.liste_sorcellerie_1[Random.nextInt(this.liste_domination_1.size)]
+            this.rune_secondaire2 = this.liste_sorcellerie_2[Random.nextInt(this.liste_domination_2.size)]
+            this.rune_secondaire3 = this.liste_sorcellerie_3[Random.nextInt(this.liste_domination_3.size)]
         }
         if (rune == 4){
             this.rune_principal = this.liste_volonte[Random.nextInt(this.liste_volonte.size)]
+            this.rune_secondaire1 = this.liste_volonte_1[Random.nextInt(this.liste_domination_1.size)]
+            this.rune_secondaire2 = this.liste_volonte_2[Random.nextInt(this.liste_domination_2.size)]
+            this.rune_secondaire3 = this.liste_volonte_3[Random.nextInt(this.liste_domination_3.size)]
         }
 
 
@@ -121,7 +186,7 @@ class modele {
         return true
     }
 
-    override fun toString(): String = "$item1, $item2, $item3, $item4, $item_mythic, $item_boots, $champ, $rune_principal"
+    override fun toString(): String = "$item1, $item2, $item3, $item4, $item_mythic, $item_boots, $champ, $rune_principal, $rune_secondaire1, $rune_secondaire2, $rune_secondaire3"
 
-    fun get_items(): Array<String> = arrayOf(this.item1, this.item2, this.item3, this.item4, this.item_mythic, this.item_boots, this.champ, this.rune_principal)
+    fun get_items(): Array<String> = arrayOf(this.item1, this.item2, this.item3, this.item4, this.item_mythic, this.item_boots, this.champ, this.rune_principal, this.rune_secondaire1, this.rune_secondaire2, this.rune_secondaire3)
 }

@@ -22,6 +22,9 @@ class Vue: GridPane() {
     private var image_item_boots = ImageView(Image(FileInputStream("$path_images/Item/Boots/Berserkers_Greaves_item.png")))
     private var image_champ = ImageView(Image(FileInputStream("$path_images/Champion/Aatrox.png")))
     private var image_rune = ImageView(Image(FileInputStream("$path_images/Runes/Update_Runes/Aftershock_rune.png")))
+    private var image_rune_secondaire1 = ImageView(Image(FileInputStream("$path_images/Runes/Update_Runes/Domination/Secondaire/Cheap_Shot_rune.png")))
+    private var image_rune_secondaire2 = ImageView(Image(FileInputStream("$path_images/Runes/Update_Runes/Domination/Secondaire/Cheap_Shot_rune.png")))
+    private var image_rune_secondaire3 = ImageView(Image(FileInputStream("$path_images/Runes/Update_Runes/Domination/Secondaire/Cheap_Shot_rune.png")))
 
 
     private val generate = Button("Build")
@@ -47,8 +50,17 @@ class Vue: GridPane() {
 
 
         this.add(this.image_rune, 0, 2)
+        this.add(this.image_rune_secondaire1,0,3)
+        this.add(this.image_rune_secondaire2,0,4)
+        this.add(this.image_rune_secondaire3,0,5)
         image_rune.setFitWidth(100.0);
         image_rune.setFitHeight(100.0);
+        image_rune_secondaire1.setFitWidth(50.0);
+        image_rune_secondaire1.setFitHeight(50.0);
+        image_rune_secondaire2.setFitWidth(50.0);
+        image_rune_secondaire2.setFitHeight(50.0);
+        image_rune_secondaire3.setFitWidth(50.0);
+        image_rune_secondaire3.setFitHeight(50.0);
 
         this.add(this.generate, 0, 1)
 
@@ -64,6 +76,9 @@ class Vue: GridPane() {
         this.image_item_boots.image = Image(FileInputStream("$path_images/Item/Boots/${array[5]}_item.png"))
         this.image_champ.image  = Image(FileInputStream("$path_images/Champion/${array[6]}.png"))
         this.image_rune.image  = Image(FileInputStream("$path_images/Runes/Update_Runes/${array[7]}.png"))
+        this.image_rune_secondaire1.image  = Image(FileInputStream("$path_images/Runes/Update_Runes/Secondaire/${array[8]}.png"))
+        this.image_rune_secondaire2.image  = Image(FileInputStream("$path_images/Runes/Update_Runes/Secondaire/${array[9]}.png"))
+        this.image_rune_secondaire3.image  = Image(FileInputStream("$path_images/Runes/Update_Runes/Secondaire/${array[10]}.png"))
     }
 
     /*
