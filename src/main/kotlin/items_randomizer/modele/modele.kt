@@ -136,25 +136,25 @@ class modele {
             this.rune_principal = this.liste_inspiration[Random.nextInt(this.liste_inspiration.size)]
             this.rune_secondaire1 = this.liste_inspiration_1[Random.nextInt(this.liste_domination_1.size)]
             this.rune_secondaire2 = this.liste_inspiration_2[Random.nextInt(this.liste_domination_2.size)]
-            this.rune_secondaire3 = this.liste_inspiration_3[Random.nextInt(this.liste_domination_3.size)]
+            this.rune_secondaire3 = this.liste_inspiration_3[Random.nextInt(this.liste_precision_1.size)]
         }
         if (rune == 2){
             this.rune_principal = this.liste_precision[Random.nextInt(this.liste_precision.size)]
-            this.rune_secondaire1 = this.liste_precision_1[Random.nextInt(this.liste_domination_1.size)]
-            this.rune_secondaire2 = this.liste_precision_2[Random.nextInt(this.liste_domination_2.size)]
-            this.rune_secondaire3 = this.liste_precision_3[Random.nextInt(this.liste_domination_3.size)]
+            this.rune_secondaire1 = this.liste_precision_1[Random.nextInt(this.liste_precision_1.size)]
+            this.rune_secondaire2 = this.liste_precision_2[Random.nextInt(this.liste_precision_2.size)]
+            this.rune_secondaire3 = this.liste_precision_3[Random.nextInt(this.liste_precision_3.size)]
         }
         if (rune == 3){
             this.rune_principal = this.liste_sorcellerie[Random.nextInt(this.liste_sorcellerie.size)]
             this.rune_secondaire1 = this.liste_sorcellerie_1[Random.nextInt(this.liste_domination_1.size)]
             this.rune_secondaire2 = this.liste_sorcellerie_2[Random.nextInt(this.liste_domination_2.size)]
-            this.rune_secondaire3 = this.liste_sorcellerie_3[Random.nextInt(this.liste_domination_3.size)]
+            this.rune_secondaire3 = this.liste_sorcellerie_3[Random.nextInt(this.liste_precision_1.size)]
         }
         if (rune == 4){
             this.rune_principal = this.liste_volonte[Random.nextInt(this.liste_volonte.size)]
             this.rune_secondaire1 = this.liste_volonte_1[Random.nextInt(this.liste_domination_1.size)]
             this.rune_secondaire2 = this.liste_volonte_2[Random.nextInt(this.liste_domination_2.size)]
-            this.rune_secondaire3 = this.liste_volonte_3[Random.nextInt(this.liste_domination_3.size)]
+            this.rune_secondaire3 = this.liste_volonte_3[Random.nextInt(this.liste_precision_1.size)]
         }
 
 
